@@ -9,7 +9,7 @@
 <meta name="author" content="Xiao Fudi">
 <meta name="dcterms.date" content="2024-04-13">
 
-<title>ISSS608-VAA - 1 A Layered Grammar of Graphics: ggplot2 methods</title>
+<title>ISSS608-VAA - In class exercise</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -150,30 +116,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><strong>Overview</strong></a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started"><strong>1 Getting Started</strong></a>
-  <ul class="collapse">
-  <li><a href="#loading-r-package" id="toc-loading-r-package" class="nav-link" data-scroll-target="#loading-r-package"><strong>1.1 Loading R package</strong></a></li>
-  <li><a href="#importing-data" id="toc-importing-data" class="nav-link" data-scroll-target="#importing-data"><strong>1.2 Importing Data</strong></a></li>
-  <li><a href="#introducing-ggplot" id="toc-introducing-ggplot" class="nav-link" data-scroll-target="#introducing-ggplot"><strong>1.3 Introducing ggplot</strong></a></li>
-  <li><a href="#r-graphics-vs-ggplot" id="toc-r-graphics-vs-ggplot" class="nav-link" data-scroll-target="#r-graphics-vs-ggplot"><strong>1.3.1 R Graphics VS ggplot</strong></a></li>
-  <li><a href="#grammar-of-graphics" id="toc-grammar-of-graphics" class="nav-link" data-scroll-target="#grammar-of-graphics"><strong>1.4 Grammar of Graphics</strong></a></li>
-  <li><a href="#essential-grammatical-elements-in-ggplot2-data" id="toc-essential-grammatical-elements-in-ggplot2-data" class="nav-link" data-scroll-target="#essential-grammatical-elements-in-ggplot2-data"><strong>1.5 Essential Grammatical Elements in ggplot2: data</strong></a></li>
-  <li><a href="#essential-grammatical-elements-in-ggplot2-aesthetic-mappings" id="toc-essential-grammatical-elements-in-ggplot2-aesthetic-mappings" class="nav-link" data-scroll-target="#essential-grammatical-elements-in-ggplot2-aesthetic-mappings">1.6 Essential Grammatical Elements in ggplot2: Aesthetic mappings</a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">1 A Layered Grammar of Graphics: ggplot2 methods</h1>
+<h1 class="title">In class exercise</h1>
 </div>
 
 
@@ -206,110 +156,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="overview" class="level1">
-<h1><strong>Overview</strong></h1>
-<p>In this chapter, we will learn the basic principles and essential components of ggplot2, and gain hands-on experience on using these components to plot statistical graphics based on the principle of Layered Grammar of Graphics</p>
-<p>By then end of this chapter, we will be able to apply the essential graphical elements provided by ggplot2 to create elegant and yet functional statistical graphics.</p>
-</section>
-<section id="getting-started" class="level1">
-<h1><strong>1 Getting Started</strong></h1>
-<section id="loading-r-package" class="level3">
-<h3 class="anchored" data-anchor-id="loading-r-package"><strong>1.1 Loading R package</strong></h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="importing-data" class="level3">
-<h3 class="anchored" data-anchor-id="importing-data"><strong>1.2 Importing Data</strong></h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>exam_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/Exam_data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 322 Columns: 7
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (4): ID, CLASS, GENDER, RACE
-dbl (3): ENGLISH, MATHS, SCIENCE
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-</div>
-</section>
-<section id="introducing-ggplot" class="level2">
-<h2 class="anchored" data-anchor-id="introducing-ggplot"><strong>1.3 Introducing ggplot</strong></h2>
-<p>ggplot2 is an R package for creating&nbsp;data-driven&nbsp;graphics based on&nbsp;The Grammar of Graphics. It is also part of the tidyverse family specially designed for visual exploration and communication.</p>
-<p>For more information, please visit <a href="https://ggplot2.tidyverse.org/">ggplot2 link</a></p>
-</section>
-<section id="r-graphics-vs-ggplot" class="level2">
-<h2 class="anchored" data-anchor-id="r-graphics-vs-ggplot"><strong>1.3.1 R Graphics VS ggplot</strong></h2>
-<p>First, let us compare how R Graphics, the core graphical functions of Base R and ggplot plot a simple histogram.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(exam_data<span class="sc">$</span>MATHS, <span class="at">col =</span> <span class="st">'#5e82c9'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Hands-on_Ex01_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, <span class="fu">aes</span>(<span class="at">x =</span> MATHS)) <span class="sc">+</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">10</span>, </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">boundary =</span> <span class="dv">100</span>,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">color=</span><span class="st">"black"</span>, </span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill=</span><span class="st">'#5e82c9'</span>) <span class="sc">+</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Distribution of Maths scores"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Hands-on_Ex01_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</section>
-<section id="grammar-of-graphics" class="level2">
-<h2 class="anchored" data-anchor-id="grammar-of-graphics"><strong>1.4 Grammar of Graphics</strong></h2>
-<p>Grammar of Graphics is a general scheme for data visualization which breaks up graphs into semantic components such as scales and layers. It was introduced by Leland Wilkinson (1999) <strong>Grammar of Graphics</strong>, Springer. The grammar of graphics is an answer to a question:</p>
-<p>What is a statistical graphic?</p>
-<p>In the nutshell, Grammar of Graphics defines the rules of structuring mathematical and aesthetic elements into a meaningful graph.</p>
-<p>There are two principles in Grammar of Graphics, they are:</p>
-<ul>
-<li><p>Graphics = distinct layers of grammatical elements</p></li>
-<li><p>Meaningful plots through aesthetic mapping</p></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-1417645947.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Reference: Hadley Wickham (2010) <a href="https://vita.had.co.nz/papers/layered-grammar.html">“A layered grammar of graphics.”</a> <em>Journal of Computational and Graphical Statistics</em>, vol.&nbsp;19, no. 1, pp.&nbsp;3–28.</figcaption>
-</figure>
-</div>
-<p>A short description of each building block are as follows:</p>
-<ul>
-<li><p><strong>Data</strong>: The dataset being plotted.</p></li>
-<li><p><strong>Aesthetics</strong> take attributes of the data and use them to influence visual characteristics, such as position, colours, size, shape, or transparency.</p></li>
-<li><p><strong>Geometrics</strong>: The visual elements used for our data, such as point, bar or line.</p></li>
-<li><p><strong>Facets</strong> split the data into subsets to create multiple variations of the same graph (paneling, multiple plots).</p></li>
-<li><p><strong>Statistics</strong>, statiscal transformations that summarise data (e.g.&nbsp;mean, confidence intervals).</p></li>
-<li><p><strong>Coordinate systems</strong> define the plane on which data are mapped on the graphic.</p></li>
-<li><p><strong>Themes</strong> modify all non-data components of a plot, such as main title, sub-title, y-aixs title, or legend background.</p></li>
-</ul>
-</section>
-<section id="essential-grammatical-elements-in-ggplot2-data" class="level2">
-<h2 class="anchored" data-anchor-id="essential-grammatical-elements-in-ggplot2-data"><strong>1.5 Essential Grammatical Elements in ggplot2: data</strong></h2>
-<pre><code>Let us call the `ggplot()` function using the code chunk on the right.</code></pre>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="Hands-on_Ex01_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<ul>
-<li><p>A blank canvas appears.</p></li>
-<li><p><code>ggplot()</code> initializes a ggplot object.</p></li>
-<li><p>The <em>data</em> argument defines the dataset to be used for plotting.</p></li>
-<li><p>If the dataset is not already a data.frame, it will be converted to one by <code>fortify()</code>.</p></li>
-</ul>
-</section>
-<section id="essential-grammatical-elements-in-ggplot2-aesthetic-mappings" class="level2">
-<h2 class="anchored" data-anchor-id="essential-grammatical-elements-in-ggplot2-aesthetic-mappings">1.6 Essential Grammatical Elements in ggplot2: Aesthetic mappings</h2>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

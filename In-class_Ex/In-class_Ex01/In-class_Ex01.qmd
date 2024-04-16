@@ -1,0 +1,11 @@
+---
+title: "In class exercise"
+author: "Xiao Fudi"
+date: "April 13, 2024"
+date-modified: "last-modified"
+execute:
+  Eval: true
+  Echo: true
+  Warning: false
+  Freeze: true
+---
