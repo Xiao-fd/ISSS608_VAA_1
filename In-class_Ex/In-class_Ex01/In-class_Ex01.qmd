@@ -10,7 +10,7 @@ execute:
   Freeze: true
 ---
 
-Loading R Packages 
+Loading R Packages
 
 In the codde chunck below, \['P_load() '\]of [pacman](https://cran.r-project.org/web/packages/pacman/index.html) package is use to load tidyverse family of packages.
 
@@ -24,6 +24,7 @@ read.csv("../In-class_Ex01/data/realis2019.csv")
 ```
 
 read.csvread.csv("../In-class_Ex01/data/realis2019.csv")
+
 ```{r}
 realis <- 
  read.csv("../In-class_Ex01/data/realis2019.csv")
@@ -33,8 +34,7 @@ realis <-
 names(realis)
 ```
 
-```{r}
-ggplot(data = realis, 
-       aes(x = `Unit Price ($ psm)`)) + 
-  geom_histogram()
+```{}
 ```
+
+ggplot(data = realis, aes(x = `Unit Price ($ psm)`)) + geom_histogram()
