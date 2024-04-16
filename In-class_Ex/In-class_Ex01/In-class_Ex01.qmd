@@ -1,5 +1,5 @@
 ---
-title: "In class exercise"
+title: "In class exercise 1"
 author: "Xiao Fudi"
 date: "April 13, 2024"
 date-modified: "last-modified"
@@ -9,3 +9,32 @@ execute:
   Warning: false
   Freeze: true
 ---
+
+Loading R Packages 
+
+In the codde chunck below, \['P_load() '\]of [pacman](https://cran.r-project.org/web/packages/pacman/index.html) package is use to load tidyverse family of packages.
+
+```{r}
+pacman::p_load(tidyverse)
+```
+
+```{r}
+read.csv("../In-class_Ex01/data/realis2019.csv")
+
+```
+
+read.csvread.csv("../In-class_Ex01/data/realis2019.csv")
+```{r}
+realis <- 
+ read.csv("../In-class_Ex01/data/realis2019.csv")
+```
+
+```{r}
+names(realis)
+```
+
+```{r}
+ggplot(data = realis, 
+       aes(x = `Unit Price ($ psm)`)) + 
+  geom_histogram()
+```
