@@ -1,1 +1,10 @@
 /* css styles */
+/* styles.css */
+body {
+font-family: 'Helvetica', sans-serif;
+
+}
+
+.icon-link {
+  margin: 0.375rem;
+}
