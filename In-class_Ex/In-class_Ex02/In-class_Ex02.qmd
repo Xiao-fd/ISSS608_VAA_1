@@ -1,0 +1,31 @@
+---
+title: "Take-home Exercise 1"
+date: "April 13, 2024"
+date-modified: "last-modified"
+execute:
+  eval: true
+  echo: true
+  warning: false
+  Freeze: true
+---
+
+```{r}
+pacman::p_load(tidyverse)
+
+pacman::p_load(ggdist, ggthemes,colospace,ggridges ) 
+
+```
+
+```{r}
+exam_data <- read_csv("data/Exam_data.csv")
+```
+
+probility density plot
+
+color = "#1696d2", can get from rgb color chart alpha =.6 change the color
+
+```{}
+```
+
+```{}
+```

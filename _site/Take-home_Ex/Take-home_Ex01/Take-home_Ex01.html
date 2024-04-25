@@ -179,10 +179,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#creating-data-visualisation-beyond-default" id="toc-creating-data-visualisation-beyond-default" class="nav-link active" data-scroll-target="#creating-data-visualisation-beyond-default"><strong><em>Creating data visualisation beyond default</em></strong></a>
+  <li><a href="#creating-data-visualisation-beyond-default" id="toc-creating-data-visualisation-beyond-default" class="nav-link active" data-scroll-target="#creating-data-visualisation-beyond-default"><strong>Creating data visualisation beyond default</strong></a>
   <ul class="collapse">
   <li><a href="#setting-the-scene" id="toc-setting-the-scene" class="nav-link" data-scroll-target="#setting-the-scene"><strong>Setting the Scene</strong></a></li>
-  <li><a href="#our-task" id="toc-our-task" class="nav-link" data-scroll-target="#our-task"><strong>our Task</strong></a></li>
+  <li><a href="#our-task" id="toc-our-task" class="nav-link" data-scroll-target="#our-task"><strong>Our Task</strong></a></li>
   <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data"><strong>The Data</strong></a></li>
   </ul></li>
   <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started"><strong>1. Getting Started</strong></a>
@@ -192,15 +192,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation"><strong>2. Data preparation</strong></a>
   <ul class="collapse">
-  <li><a href="#convert-data-type" id="toc-convert-data-type" class="nav-link" data-scroll-target="#convert-data-type">2.2 Convert data type</a></li>
-  <li><a href="#combine-the-dataset." id="toc-combine-the-dataset." class="nav-link" data-scroll-target="#combine-the-dataset."><strong>2.1 Combine the dataset.</strong></a></li>
-  <li><a href="#remove-duplicates-and-creating-new-varaiables" id="toc-remove-duplicates-and-creating-new-varaiables" class="nav-link" data-scroll-target="#remove-duplicates-and-creating-new-varaiables">2.3 Remove duplicates and Creating new varaiables</a></li>
-  <li><a href="#summary-satatistics-of-data-table" id="toc-summary-satatistics-of-data-table" class="nav-link" data-scroll-target="#summary-satatistics-of-data-table">2.4 Summary satatistics of data table</a></li>
+  <li><a href="#convert-data-type" id="toc-convert-data-type" class="nav-link" data-scroll-target="#convert-data-type">2.1 Convert data type</a></li>
+  <li><a href="#combine-the-datasets-and-check-missing-values" id="toc-combine-the-datasets-and-check-missing-values" class="nav-link" data-scroll-target="#combine-the-datasets-and-check-missing-values"><strong>2.2 Combine the datasets and Check missing values</strong></a></li>
+  <li><a href="#remove-duplicates-and-create-new-varaiables" id="toc-remove-duplicates-and-create-new-varaiables" class="nav-link" data-scroll-target="#remove-duplicates-and-create-new-varaiables">2.3 Remove duplicates and Create new varaiables</a></li>
+  <li><a href="#summary-statistics-of-data-table" id="toc-summary-statistics-of-data-table" class="nav-link" data-scroll-target="#summary-statistics-of-data-table">2.4 Summary statistics of data table</a></li>
   </ul></li>
   <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis"><strong>3. Exploratory Data Analysis</strong></a>
   <ul class="collapse">
-  <li><a href="#the-private-housing-transaction-trend-from-2023-2024q1" id="toc-the-private-housing-transaction-trend-from-2023-2024q1" class="nav-link" data-scroll-target="#the-private-housing-transaction-trend-from-2023-2024q1">3.1 the Private housing transaction trend from 2023-2024Q1</a></li>
-  <li><a href="#the-relationship-between-the-sales-units-and-area" id="toc-the-relationship-between-the-sales-units-and-area" class="nav-link" data-scroll-target="#the-relationship-between-the-sales-units-and-area">3.2 the relationship between the sales Units and area</a></li>
+  <li><a href="#the-relationship-between-transacted-price-and-property-type" id="toc-the-relationship-between-transacted-price-and-property-type" class="nav-link" data-scroll-target="#the-relationship-between-transacted-price-and-property-type">3.1 The relationship between <em>Transacted price</em> and <em>Property type</em></a></li>
+  <li><a href="#distribution-of-sales-units-across-regions-and-areas" id="toc-distribution-of-sales-units-across-regions-and-areas" class="nav-link" data-scroll-target="#distribution-of-sales-units-across-regions-and-areas">3.2 Distribution of <em>Sales Units</em> across <em>Regions</em> and <em>Areas</em></a></li>
+  <li><a href="#the-private-housing-price-trend-from-2023-2024q1" id="toc-the-private-housing-price-trend-from-2023-2024q1" class="nav-link" data-scroll-target="#the-private-housing-price-trend-from-2023-2024q1">3.3 The Private Housing price trend from 2023-2024Q1</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -228,7 +230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">April 20, 2024</p>
+      <p class="date-modified">April 25, 2024</p>
     </div>
   </div>
     
@@ -238,16 +240,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <section id="creating-data-visualisation-beyond-default" class="level1">
-<h1><strong><em>Creating data visualisation beyond default</em></strong></h1>
+<h1><strong>Creating data visualisation beyond default</strong></h1>
 <section id="setting-the-scene" class="level2">
 <h2 class="anchored" data-anchor-id="setting-the-scene"><strong>Setting the Scene</strong></h2>
 <p>There are two major residential property market in Singapore, namely public and private housing. Public housing aims to meet the basic need of the general public with monthly household income less than or equal to S$14,000. For families with monthly household income more than S$14,000, they need to turn to the private residential market.</p>
 </section>
 <section id="our-task" class="level2">
-<h2 class="anchored" data-anchor-id="our-task"><strong>our Task</strong></h2>
+<h2 class="anchored" data-anchor-id="our-task"><strong>Our Task</strong></h2>
 <p>In this exercise, Exploratory Data Analysis (EDA) methods and ggplot functions are used to explore:</p>
 <ul>
-<li><p>the distribution of prices across different regions and types of residences.</p></li>
+<li><p>the distribution of prices across different regions and residences types .</p></li>
 <li><p>the relationship between the price and types of residences and sub-market.</p></li>
 </ul>
 </section>
@@ -263,18 +265,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="loading-r-packages"><strong>1.1 Loading R packages</strong></h2>
 <p>We load the following R packages using the <code>pacman::p_load()</code> function:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(ggrepel, patchwork, </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>               ggthemes, hrbrthemes,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>               tidyverse) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(tidyverse, ggrepel, patchwork, </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>               ggthemes, hrbrthemes,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>              ggridges, colorspace) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><p><strong>tidyverse</strong>: Core collection of R packages designed for data science</p></li>
-<li><p><strong>ggrepel</strong>: to provides geoms for <strong>ggplot2</strong> to repel overlapping text labels</p></li>
+<li><p><strong>ggrepel</strong>: to provide geoms for <strong>ggplot2</strong> to repel overlapping text labels</p></li>
 <li><p><strong>ggthemes</strong>: to use additional themes for <strong>ggplot2</strong></p></li>
 <li><p><strong>patchwork</strong>: to prepare composite figure created using <strong>ggplot2</strong></p></li>
-<li><p><strong>hrbrthemes</strong>: to provides typography-centric themes and theme components for <strong>ggplot2</strong></p></li>
+<li><p><strong>hrbrthemes</strong>: to provide typography-centric themes and theme components for <strong>ggplot2</strong></p></li>
+<li><p><strong>ggridges</strong>, a ggplot2 extension specially designed for plotting ridgeline plots</p></li>
+<li><p><strong>colorspace,</strong> to provide a broad toolbox for selecting individual colors or color palettes, manipulating these colors, and employing them in various kinds of visualisations</p></li>
 </ul>
 </section>
 <section id="importing-data" class="level2">
@@ -283,138 +285,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Read the individual CSV files into data frames. Check that the structure of each data frame is the same.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>RT_q1_2023 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/ResidentialTransaction2023Q1.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 4722 Columns: 21
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (15): Project Name, Sale Date, Address, Type of Sale, Type of Area, Nett...
-dbl  (1): Number of Units
-num  (5): Transacted Price ($), Area (SQFT), Unit Price ($ PSF), Area (SQM),...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>RT_q2_2023 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/ResidentialTransaction2023Q2.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 6125 Columns: 21
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (15): Project Name, Sale Date, Address, Type of Sale, Type of Area, Nett...
-dbl  (1): Number of Units
-num  (5): Transacted Price ($), Area (SQFT), Unit Price ($ PSF), Area (SQM),...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>RT_q2_2023 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/ResidentialTransaction2023Q2.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>RT_q3_2023 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/ResidentialTransaction2023Q3.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: One or more parsing issues, call `problems()` on your data frame for details,
-e.g.:
-  dat &lt;- vroom(...)
-  problems(dat)</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 6206 Columns: 21
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (15): Project Name, Sale Date, Address, Type of Sale, Type of Area, Nett...
-dbl  (2): Area (SQM), Number of Units
-num  (4): Transacted Price ($), Area (SQFT), Unit Price ($ PSF), Unit Price ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>RT_q3_2023 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/ResidentialTransaction2023Q3.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>RT_q4_2023 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/ResidentialTransaction2023Q4.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 4851 Columns: 21
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (15): Project Name, Sale Date, Address, Type of Sale, Type of Area, Nett...
-dbl  (1): Number of Units
-num  (5): Transacted Price ($), Area (SQFT), Unit Price ($ PSF), Area (SQM),...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>RT_q4_2023 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/ResidentialTransaction2023Q4.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>RT_q1_2024 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/ResidentialTransaction2024Q1.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 4902 Columns: 21
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (15): Project Name, Sale Date, Address, Type of Sale, Type of Area, Nett...
-dbl  (1): Number of Units
-num  (5): Transacted Price ($), Area (SQFT), Unit Price ($ PSF), Area (SQM),...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>RT_q1_2024 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/ResidentialTransaction2024Q1.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This is to conduct a preliminary exploration to understand the basic characteristics of the dataset. Notably, the ‘Sale Date’ column, which should ideally be a date type to facilitate chronological analysis, is read as a character (chr) type.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
 </div>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">spec</span>(RT_q1_2024)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>cols(
-  `Project Name` = col_character(),
-  `Transacted Price ($)` = col_number(),
-  `Area (SQFT)` = col_number(),
-  `Unit Price ($ PSF)` = col_number(),
-  `Sale Date` = col_character(),
-  Address = col_character(),
-  `Type of Sale` = col_character(),
-  `Type of Area` = col_character(),
-  `Area (SQM)` = col_number(),
-  `Unit Price ($ PSM)` = col_number(),
-  `Nett Price($)` = col_character(),
-  `Property Type` = col_character(),
-  `Number of Units` = col_double(),
-  Tenure = col_character(),
-  `Completion Date` = col_character(),
-  `Purchaser Address Indicator` = col_character(),
-  `Postal Code` = col_character(),
-  `Postal District` = col_character(),
-  `Postal Sector` = col_character(),
-  `Planning Region` = col_character(),
-  `Planning Area` = col_character()
-)</code></pre>
+<div class="callout-body-container callout-body">
+<p><img src="images/clipboard-224818948.png" class="img-fluid" width="380"></p>
+<p>It’s alerting that not all data may have been read into the R data frame correctly due to issues in the CSV file format or its contents. The data sets type have to be converted first before combine them into one.</p>
 </div>
 </div>
-<p>This is to conduct a preliminary exploration to understand the basic characteristics of the dataset.Notably, the ‘Sale Date’ column, which should ideally be a date type to facilitate chronological analysis, is read as a character (chr) type.</p>
 </section>
 </section>
 <section id="data-preparation" class="level1">
 <h1><strong>2. Data preparation</strong></h1>
-<p>This process enhances the quality of the data and consequently the reliability of the analysis.</p>
+<p>This process is to enhance the quality of the data and consequently the reliability of the analysis.</p>
 <section id="convert-data-type" class="level2">
-<h2 class="anchored" data-anchor-id="convert-data-type">2.2 Convert data type</h2>
-<p>Before delving into analyses, it is imperative to assess the completeness of the dataset.</p>
+<h2 class="anchored" data-anchor-id="convert-data-type">2.1 Convert data type</h2>
+<p>The ‘Sale Date’ column is read as a character (chr) type, we need to convert it as date type.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>RT_q1_2023 <span class="ot">&lt;-</span> RT_q1_2023 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">as.Date</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>, <span class="at">format =</span> <span class="st">"%d %b %Y"</span>))</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>RT_q2_2023 <span class="ot">&lt;-</span> RT_q2_2023 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">as.Date</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>, <span class="at">format =</span> <span class="st">"%d %b %Y"</span>))</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>RT_q3_2023 <span class="ot">&lt;-</span> RT_q3_2023 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">as.Date</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>, <span class="at">format =</span> <span class="st">"%d %b %Y"</span>))</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>RT_q4_2023 <span class="ot">&lt;-</span> RT_q4_2023 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">as.Date</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>, <span class="at">format =</span> <span class="st">"%d %b %Y"</span>))</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>RT_q1_2024 <span class="ot">&lt;-</span> RT_q1_2024 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">as.Date</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>, <span class="at">format =</span> <span class="st">"%d %b %Y"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>RT_q1_2023 <span class="ot">&lt;-</span> RT_q1_2023 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">as.Date</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>, <span class="at">format =</span> <span class="st">"%d %b %Y"</span>))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>RT_q2_2023 <span class="ot">&lt;-</span> RT_q2_2023 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">as.Date</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>, <span class="at">format =</span> <span class="st">"%d %b %Y"</span>))</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>RT_q3_2023 <span class="ot">&lt;-</span> RT_q3_2023 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">as.Date</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>, <span class="at">format =</span> <span class="st">"%d %b %Y"</span>))</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>RT_q4_2023 <span class="ot">&lt;-</span> RT_q4_2023 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">as.Date</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>, <span class="at">format =</span> <span class="st">"%d %b %Y"</span>))</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>RT_q1_2024 <span class="ot">&lt;-</span> RT_q1_2024 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">as.Date</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>, <span class="at">format =</span> <span class="st">"%d %b %Y"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="combine-the-dataset." class="level2">
-<h2 class="anchored" data-anchor-id="combine-the-dataset."><strong>2.1 Combine the dataset.</strong></h2>
-<p>Use the rbind() function to concatenate the data frames. Checking the data set structure.</p>
+<section id="combine-the-datasets-and-check-missing-values" class="level2">
+<h2 class="anchored" data-anchor-id="combine-the-datasets-and-check-missing-values"><strong>2.2 Combine the datasets and Check missing values</strong></h2>
+<p>In our analysis, we need to merge multiple quarterly datasets into a single frame to perform a comprehensive review of the trends over time. To accomplish this, we use the <em><code>bind_rows()</code></em> function from the <em><code>dplyr package</code></em>. This function is highly efficient for appending data frames, especially when they share the same columns. By binding the rows of individual quarterly data frames, we can ensure a seamless and orderly consolidation of the data.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>RT_all <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(RT_q1_2023, RT_q2_2023, RT_q3_2023, RT_q4_2023, RT_q1_2024)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>RT_all <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(RT_q1_2023, RT_q2_2023, RT_q3_2023, RT_q4_2023, RT_q1_2024)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Once we have combined the data frames into <code>RT_all</code>, it is important to verify the range of the data we are working with. We are particularly interested in the ‘Sale Date’ range to understand the temporal bounds of our dataset by the <em><code>range()</code></em> function .</p>
+
+<details>
+<summary>
+Click to show code
+</summary>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Count missing values for each column in the combined data frame</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>missing_values_summary <span class="ot">&lt;-</span> RT_all <span class="sc">%&gt;%</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(.))))</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># View the summary of missing values</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>missing_values_summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(RT_all<span class="sc">$</span><span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-01-01" "2024-03-31"</code></pre>
+</div>
+</div>
+</details>
+<p>Before delving into analyses, it is imperative to assess the completeness of the dataset.Count missing values for each column in the combined data frame. It shows only 6 missing values in the column of “Area (SQM)”. Below is the summary of missing values for each column, generated using the <em><code>summarise(across(everything(), ~ sum(is.na(.))))</code></em> function, which allows us to count NA values across all columns efficiently.</p>
+<details>
+<summary>
+Click to show code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>missing_values_summary <span class="ot">&lt;-</span> RT_all <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(.))))</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>missing_values_summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 21
   `Project Name` `Transacted Price ($)` `Area (SQFT)` `Unit Price ($ PSF)`
@@ -428,30 +371,58 @@ num  (5): Transacted Price ($), Area (SQFT), Unit Price ($ PSF), Area (SQM),...
 #   `Planning Region` &lt;int&gt;, `Planning Area` &lt;int&gt;</code></pre>
 </div>
 </div>
-<p>Check the combined dataset with str(), it shows all the detailed data after combine.</p>
+</details></section>
+<section id="remove-duplicates-and-create-new-varaiables" class="level2">
+<h2 class="anchored" data-anchor-id="remove-duplicates-and-create-new-varaiables">2.3 Remove duplicates and Create new varaiables</h2>
+<p>Upon assessment of our dataset, we have discerned a dual representation of area measurements: ‘Area (SQFT)’ and ‘Area (SQM)’. We observed that the ‘Area (SQM)’ column contains missing values which may complicate our analyses. Given the completeness and sufficiency of the ‘Area (SQFT)’ data, we have opted to remove the ‘Area (SQM)’,‘Unit Price ($ PSM)’ column, and Nett Price($).</p>
+<details>
+<summary>
+Click to show code
+</summary>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(RT_all<span class="sc">$</span><span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>RT_new <span class="ot">&lt;-</span> RT_all <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="st">'Unit Price ($ PSM)'</span>, <span class="sc">-</span><span class="st">'Area (SQM)'</span>, <span class="sc">-</span><span class="st">`</span><span class="at">Nett Price($)</span><span class="st">`</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(RT_new)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-01-01" "2024-03-31"</code></pre>
+<pre><code># A tibble: 26,806 × 18
+   `Project Name`      `Transacted Price ($)` `Area (SQFT)` `Unit Price ($ PSF)`
+   &lt;chr&gt;                                &lt;dbl&gt;         &lt;dbl&gt;                &lt;dbl&gt;
+ 1 THE REEF AT KING'S…                2317000          883.                 2625
+ 2 URBAN TREASURES                    1823500          883.                 2066
+ 3 NORTH GAIA                         1421112         1076.                 1320
+ 4 NORTH GAIA                         1258112         1033.                 1218
+ 5 PARC BOTANNIA                      1280000          872.                 1468
+ 6 NANYANG PARK                       5870000         3323.                 1767
+ 7 PALMS @ SIXTH AVEN…                4950000         4521.                 1095
+ 8 N.A.                               3260000         1555.                 2096
+ 9 WHISTLER GRAND                      850000          441.                 1926
+10 NORTHOAKS                          1268000         1604.                  791
+# ℹ 26,796 more rows
+# ℹ 14 more variables: `Sale Date` &lt;date&gt;, Address &lt;chr&gt;, `Type of Sale` &lt;chr&gt;,
+#   `Type of Area` &lt;chr&gt;, `Property Type` &lt;chr&gt;, `Number of Units` &lt;dbl&gt;,
+#   Tenure &lt;chr&gt;, `Completion Date` &lt;chr&gt;, `Purchaser Address Indicator` &lt;chr&gt;,
+#   `Postal Code` &lt;chr&gt;, `Postal District` &lt;chr&gt;, `Postal Sector` &lt;chr&gt;,
+#   `Planning Region` &lt;chr&gt;, `Planning Area` &lt;chr&gt;</code></pre>
 </div>
 </div>
-</section>
-<section id="remove-duplicates-and-creating-new-varaiables" class="level2">
-<h2 class="anchored" data-anchor-id="remove-duplicates-and-creating-new-varaiables">2.3 Remove duplicates and Creating new varaiables</h2>
-<p>Remove duplicates and missing values Remove duplicates based on ‘Area (SQM)’ and ‘Unit Price ($ PSM)’ columns and <code>Nett Price($)</code></p>
-<p>Classify the date accordingly as quarter ,</p>
+</details>
+<p>As part of this analytics project, we need to organize the dates into quarters for better analysis and understanding of trends over time. By classifying the dates into quarters, we can identify seasonal patterns, track changes in performance or behavior, and make more informed decisions based on the insights gained from our analysis.</p>
+<details>
+<summary>
+Click to show code
+</summary>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>RT_new <span class="ot">&lt;-</span> RT_new <span class="sc">%&gt;%</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Quarter =</span> <span class="fu">case_when</span>(</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">quarter</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">2023</span> <span class="sc">~</span> <span class="st">"Q1 2023"</span>,</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">quarter</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">2</span> <span class="sc">&amp;</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">2023</span> <span class="sc">~</span> <span class="st">"Q2 2023"</span>,</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">quarter</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">3</span> <span class="sc">&amp;</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">2023</span> <span class="sc">~</span> <span class="st">"Q3 2023"</span>,</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">quarter</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">4</span> <span class="sc">&amp;</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">2023</span> <span class="sc">~</span> <span class="st">"Q4 2023"</span>,</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">quarter</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">2024</span> <span class="sc">&amp;</span> <span class="fu">month</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">%in%</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span> <span class="sc">~</span> <span class="st">"Q1 2024"</span>,</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Other"</span>  </span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>  ))</span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(RT_new)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>RT_new <span class="ot">&lt;-</span> RT_new <span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Quarter =</span> <span class="fu">case_when</span>(</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">quarter</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">2023</span> <span class="sc">~</span> <span class="st">"Q1 2023"</span>,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">quarter</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">2</span> <span class="sc">&amp;</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">2023</span> <span class="sc">~</span> <span class="st">"Q2 2023"</span>,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">quarter</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">3</span> <span class="sc">&amp;</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">2023</span> <span class="sc">~</span> <span class="st">"Q3 2023"</span>,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">quarter</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">4</span> <span class="sc">&amp;</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">2023</span> <span class="sc">~</span> <span class="st">"Q4 2023"</span>,</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">quarter</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">==</span> <span class="dv">2024</span> <span class="sc">&amp;</span> <span class="fu">month</span>(<span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">%in%</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span> <span class="sc">~</span> <span class="st">"Q1 2024"</span>,</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Other"</span>  </span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(RT_new)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 19
   `Project Name`       `Transacted Price ($)` `Area (SQFT)` `Unit Price ($ PSF)`
@@ -469,38 +440,48 @@ num  (5): Transacted Price ($), Area (SQFT), Unit Price ($ PSF), Area (SQM),...
 #   `Planning Region` &lt;chr&gt;, `Planning Area` &lt;chr&gt;, Quarter &lt;chr&gt;</code></pre>
 </div>
 </div>
-<p>Check the property type for classification</p>
+</details>
+<p>There are few housing types in the data sets, which composed of private housing and public housing. Next we will conduct check on the property type for classification.To confirm the categorization and examine the property types present in our dataset, we employ the <code>unique()</code> function, which identifies distinct entries within the ‘Property Type’ column.</p>
+<details>
+<summary>
+Click to show code
+</summary>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(RT_new<span class="sc">$</span><span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(RT_new<span class="sc">$</span><span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Condominium"           "Executive Condominium" "Terrace House"        
 [4] "Semi-Detached House"   "Apartment"             "Detached House"       </code></pre>
 </div>
 </div>
-<p>Condominium, Terrace House, Executive Condominium, Semi-Detached House, and Detached House would be classified as Private Housing. Apartment is a Housing and Development Board (HDB) flat, which is public housing.</p>
-<p>To create a new column in the dataframe with the classification of ‘Public Housing’ or ‘Private Housing’,we can use the mutate function from the dplyr package</p>
+</details>
+<p>In summary, Condominium, Terrace House, Executive Condominium, Semi-Detached House, and Detached House would be classified as Private Housing. Apartment is a Housing and Development Board (HDB) flat, which is public housing.</p>
+<p>To create a new column in the dataframe with the classification of ‘Public Housing’ or ‘Private Housing’,we can use the <code>mutate()</code> function from the dplyr package.</p>
+<details>
+<summary>
+Click to show code
+</summary>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>private_types <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Condominium"</span>, <span class="st">"Terrace House"</span>, <span class="st">"Executive Condominium"</span>,</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"Semi-Detached House"</span>, <span class="st">"Detached House"</span>)</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>public_types <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Apartment"</span>) <span class="co"># Modify this based on your specific context</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the function to classify the housing type</span></span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>classify_housing <span class="ot">&lt;-</span> <span class="cf">function</span>(type) {</span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (type <span class="sc">%in%</span> private_types) {</span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="st">'Private Housing'</span>)</span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (type <span class="sc">%in%</span> public_types) {</span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="st">'Public Housing'</span>)</span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="st">'Other'</span>) <span class="co"># In case there are types that do not fit in the above categories</span></span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Use mutate to apply the classification to a new column</span></span>
-<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>RT_new <span class="ot">&lt;-</span> RT_new <span class="sc">%&gt;%</span></span>
-<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Housing_Category =</span> <span class="fu">sapply</span>(<span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>, classify_housing))</span>
-<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the first few rows of your dataframe to confirm</span></span>
-<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(RT_new)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>private_types <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Condominium"</span>, <span class="st">"Terrace House"</span>, <span class="st">"Executive Condominium"</span>,</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"Semi-Detached House"</span>, <span class="st">"Detached House"</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>public_types <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Apartment"</span>) <span class="co"># Modify this based on your specific context</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the function to classify the housing type</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>classify_housing <span class="ot">&lt;-</span> <span class="cf">function</span>(type) {</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (type <span class="sc">%in%</span> private_types) {</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="st">'Private Housing'</span>)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (type <span class="sc">%in%</span> public_types) {</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="st">'Public Housing'</span>)</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="st">'Other'</span>) <span class="co"># In case there are types that do not fit in the above categories</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Use mutate to apply the classification to a new column</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>RT_new <span class="ot">&lt;-</span> RT_new <span class="sc">%&gt;%</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Housing_Category =</span> <span class="fu">sapply</span>(<span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>, classify_housing))</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the first few rows of your dataframe to confirm</span></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(RT_new)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 20
   `Project Name`       `Transacted Price ($)` `Area (SQFT)` `Unit Price ($ PSF)`
@@ -519,8 +500,10 @@ num  (5): Transacted Price ($), Area (SQFT), Unit Price ($ PSF), Area (SQM),...
 #   Housing_Category &lt;chr&gt;</code></pre>
 </div>
 </div>
+</details>
+<p>Now that we’ve completed these preparatory steps, let’s review the updated data table by <code>glimpse()</code> function.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(RT_new)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(RT_new)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 26,806
 Columns: 20
@@ -547,170 +530,677 @@ $ Housing_Category              &lt;chr&gt; "Private Housing", "Private Housing"
 </div>
 </div>
 </section>
-<section id="summary-satatistics-of-data-table" class="level2">
-<h2 class="anchored" data-anchor-id="summary-satatistics-of-data-table">2.4 Summary satatistics of data table</h2>
+<section id="summary-statistics-of-data-table" class="level2">
+<h2 class="anchored" data-anchor-id="summary-statistics-of-data-table">2.4 Summary statistics of data table</h2>
+<p>Moving forward, we will compute summary statistics. These will provide us with valuable insights, such as the average, median, minimum, and maximum transacted prices, which are pivotal for understanding the market’s behavior.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Summary</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming RT_new has been previously loaded and mutated to include the Quarter column</span></span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>summary_table <span class="ot">&lt;-</span> RT_new <span class="sc">%&gt;%</span></span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Quarter, <span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">Total_Transactions =</span> <span class="fu">n</span>(),</span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">Average_Price =</span> <span class="fu">mean</span>(<span class="st">`</span><span class="at">Transacted Price ($)</span><span class="st">`</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">Median_Price =</span> <span class="fu">median</span>(<span class="st">`</span><span class="at">Transacted Price ($)</span><span class="st">`</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">Min_Price =</span> <span class="fu">min</span>(<span class="st">`</span><span class="at">Transacted Price ($)</span><span class="st">`</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">Max_Price =</span> <span class="fu">max</span>(<span class="st">`</span><span class="at">Transacted Price ($)</span><span class="st">`</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">'drop'</span> <span class="co"># This will remove the grouping</span></span>
-<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(summary_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 30 × 7
-   Quarter `Property Type`       Total_Transactions Average_Price Median_Price
-   &lt;chr&gt;   &lt;chr&gt;                              &lt;int&gt;         &lt;dbl&gt;        &lt;dbl&gt;
- 1 Q1 2023 Apartment                           1659      2072938.     1707000 
- 2 Q1 2023 Condominium                         2166      2189488.     1608000 
- 3 Q1 2023 Detached House                        62     14324795.    11550000 
- 4 Q1 2023 Executive Condominium                535      1394549.     1330000 
- 5 Q1 2023 Semi-Detached House                   88      5783790.     5559000 
- 6 Q1 2023 Terrace House                        212      3832491.     3550000 
- 7 Q1 2024 Apartment                           1852      1853613.     1668902.
- 8 Q1 2024 Condominium                         1858      2002576.     1730000 
- 9 Q1 2024 Detached House                        40     12378131.    10940000 
-10 Q1 2024 Executive Condominium                843      1520791.     1488000 
-# ℹ 20 more rows
-# ℹ 2 more variables: Min_Price &lt;dbl&gt;, Max_Price &lt;dbl&gt;</code></pre>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 22%">
+<col style="width: 19%">
+<col style="width: 14%">
+<col style="width: 13%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Quarter</th>
+<th style="text-align: left;">Property Type</th>
+<th style="text-align: right;">Total_Transactions</th>
+<th style="text-align: right;">Average_Price</th>
+<th style="text-align: right;">Median_Price</th>
+<th style="text-align: right;">Min_Price</th>
+<th style="text-align: right;">Max_Price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Q1 2023</td>
+<td style="text-align: left;">Apartment</td>
+<td style="text-align: right;">1659</td>
+<td style="text-align: right;">2072938</td>
+<td style="text-align: right;">1707000</td>
+<td style="text-align: right;">538000</td>
+<td style="text-align: right;">27500000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q1 2023</td>
+<td style="text-align: left;">Condominium</td>
+<td style="text-align: right;">2166</td>
+<td style="text-align: right;">2189488</td>
+<td style="text-align: right;">1608000</td>
+<td style="text-align: right;">580000</td>
+<td style="text-align: right;">392180000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q1 2023</td>
+<td style="text-align: left;">Detached House</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">14324795</td>
+<td style="text-align: right;">11550000</td>
+<td style="text-align: right;">3790000</td>
+<td style="text-align: right;">61080008</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q1 2023</td>
+<td style="text-align: left;">Executive Condominium</td>
+<td style="text-align: right;">535</td>
+<td style="text-align: right;">1394549</td>
+<td style="text-align: right;">1330000</td>
+<td style="text-align: right;">830000</td>
+<td style="text-align: right;">2347000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q1 2023</td>
+<td style="text-align: left;">Semi-Detached House</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">5783790</td>
+<td style="text-align: right;">5559000</td>
+<td style="text-align: right;">780000</td>
+<td style="text-align: right;">12600000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q1 2023</td>
+<td style="text-align: left;">Terrace House</td>
+<td style="text-align: right;">212</td>
+<td style="text-align: right;">3832491</td>
+<td style="text-align: right;">3550000</td>
+<td style="text-align: right;">988888</td>
+<td style="text-align: right;">18000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q1 2024</td>
+<td style="text-align: left;">Apartment</td>
+<td style="text-align: right;">1852</td>
+<td style="text-align: right;">1853613</td>
+<td style="text-align: right;">1668902</td>
+<td style="text-align: right;">555000</td>
+<td style="text-align: right;">16500000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q1 2024</td>
+<td style="text-align: left;">Condominium</td>
+<td style="text-align: right;">1858</td>
+<td style="text-align: right;">2002576</td>
+<td style="text-align: right;">1730000</td>
+<td style="text-align: right;">560000</td>
+<td style="text-align: right;">13049000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q1 2024</td>
+<td style="text-align: left;">Detached House</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">12378131</td>
+<td style="text-align: right;">10940000</td>
+<td style="text-align: right;">3618000</td>
+<td style="text-align: right;">39500000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q1 2024</td>
+<td style="text-align: left;">Executive Condominium</td>
+<td style="text-align: right;">843</td>
+<td style="text-align: right;">1520791</td>
+<td style="text-align: right;">1488000</td>
+<td style="text-align: right;">770000</td>
+<td style="text-align: right;">2450000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q1 2024</td>
+<td style="text-align: left;">Semi-Detached House</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">6070181</td>
+<td style="text-align: right;">5600000</td>
+<td style="text-align: right;">2600000</td>
+<td style="text-align: right;">15200000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q1 2024</td>
+<td style="text-align: left;">Terrace House</td>
+<td style="text-align: right;">216</td>
+<td style="text-align: right;">3718830</td>
+<td style="text-align: right;">3666500</td>
+<td style="text-align: right;">1850000</td>
+<td style="text-align: right;">6800000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q2 2023</td>
+<td style="text-align: left;">Apartment</td>
+<td style="text-align: right;">2661</td>
+<td style="text-align: right;">1944189</td>
+<td style="text-align: right;">1748000</td>
+<td style="text-align: right;">520000</td>
+<td style="text-align: right;">18800000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q2 2023</td>
+<td style="text-align: left;">Condominium</td>
+<td style="text-align: right;">2451</td>
+<td style="text-align: right;">1991242</td>
+<td style="text-align: right;">1670000</td>
+<td style="text-align: right;">600000</td>
+<td style="text-align: right;">45000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q2 2023</td>
+<td style="text-align: left;">Detached House</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">12151908</td>
+<td style="text-align: right;">9000000</td>
+<td style="text-align: right;">1250000</td>
+<td style="text-align: right;">42000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q2 2023</td>
+<td style="text-align: left;">Executive Condominium</td>
+<td style="text-align: right;">620</td>
+<td style="text-align: right;">1292507</td>
+<td style="text-align: right;">1281400</td>
+<td style="text-align: right;">560000</td>
+<td style="text-align: right;">2400000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q2 2023</td>
+<td style="text-align: left;">Semi-Detached House</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">5267731</td>
+<td style="text-align: right;">4505000</td>
+<td style="text-align: right;">2500888</td>
+<td style="text-align: right;">24900000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q2 2023</td>
+<td style="text-align: left;">Terrace House</td>
+<td style="text-align: right;">216</td>
+<td style="text-align: right;">3876417</td>
+<td style="text-align: right;">3554000</td>
+<td style="text-align: right;">1900000</td>
+<td style="text-align: right;">66800000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q3 2023</td>
+<td style="text-align: left;">Apartment</td>
+<td style="text-align: right;">2578</td>
+<td style="text-align: right;">1871029</td>
+<td style="text-align: right;">1680000</td>
+<td style="text-align: right;">440000</td>
+<td style="text-align: right;">11750000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q3 2023</td>
+<td style="text-align: left;">Condominium</td>
+<td style="text-align: right;">2250</td>
+<td style="text-align: right;">1874148</td>
+<td style="text-align: right;">1632500</td>
+<td style="text-align: right;">630000</td>
+<td style="text-align: right;">32000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q3 2023</td>
+<td style="text-align: left;">Detached House</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">10213797</td>
+<td style="text-align: right;">8300000</td>
+<td style="text-align: right;">3800000</td>
+<td style="text-align: right;">25300000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q3 2023</td>
+<td style="text-align: left;">Executive Condominium</td>
+<td style="text-align: right;">954</td>
+<td style="text-align: right;">1470063</td>
+<td style="text-align: right;">1432000</td>
+<td style="text-align: right;">700000</td>
+<td style="text-align: right;">2441000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q3 2023</td>
+<td style="text-align: left;">Semi-Detached House</td>
+<td style="text-align: right;">125</td>
+<td style="text-align: right;">6265132</td>
+<td style="text-align: right;">5550000</td>
+<td style="text-align: right;">2650000</td>
+<td style="text-align: right;">13054800</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q3 2023</td>
+<td style="text-align: left;">Terrace House</td>
+<td style="text-align: right;">259</td>
+<td style="text-align: right;">3874248</td>
+<td style="text-align: right;">3749000</td>
+<td style="text-align: right;">505000</td>
+<td style="text-align: right;">11000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q4 2023</td>
+<td style="text-align: left;">Apartment</td>
+<td style="text-align: right;">2022</td>
+<td style="text-align: right;">1860997</td>
+<td style="text-align: right;">1670000</td>
+<td style="text-align: right;">570000</td>
+<td style="text-align: right;">18000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q4 2023</td>
+<td style="text-align: left;">Condominium</td>
+<td style="text-align: right;">1918</td>
+<td style="text-align: right;">2137676</td>
+<td style="text-align: right;">1660000</td>
+<td style="text-align: right;">638000</td>
+<td style="text-align: right;">22000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q4 2023</td>
+<td style="text-align: left;">Detached House</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">11641208</td>
+<td style="text-align: right;">8469100</td>
+<td style="text-align: right;">1330000</td>
+<td style="text-align: right;">33888000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q4 2023</td>
+<td style="text-align: left;">Executive Condominium</td>
+<td style="text-align: right;">582</td>
+<td style="text-align: right;">1399622</td>
+<td style="text-align: right;">1371500</td>
+<td style="text-align: right;">710000</td>
+<td style="text-align: right;">2450000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q4 2023</td>
+<td style="text-align: left;">Semi-Detached House</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">5871484</td>
+<td style="text-align: right;">5025000</td>
+<td style="text-align: right;">1150000</td>
+<td style="text-align: right;">15750000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q4 2023</td>
+<td style="text-align: left;">Terrace House</td>
+<td style="text-align: right;">197</td>
+<td style="text-align: right;">3664622</td>
+<td style="text-align: right;">3576888</td>
+<td style="text-align: right;">570000</td>
+<td style="text-align: right;">10268000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<pre class="summary_table cell-code"><code>  group_by(Quarter, `Property Type`) %&gt;%
+  summarise(
+    Total_Transactions = n(),
+    Average_Price = mean(`Transacted Price ($)`, na.rm = TRUE),
+    Median_Price = median(`Transacted Price ($)`, na.rm = TRUE),
+    Min_Price = min(`Transacted Price ($)`, na.rm = TRUE),
+    Max_Price = max(`Transacted Price ($)`, na.rm = TRUE),
+    .groups = 'drop' # This will remove the grouping
+  )
+
+# Using knitr::kable() to print the full table
+kable(summary_table)</code></pre>
+</div>
+</div>
 </div>
 </div>
 </section>
 </section>
 <section id="exploratory-data-analysis" class="level1">
 <h1><strong>3. Exploratory Data Analysis</strong></h1>
-<section id="the-private-housing-transaction-trend-from-2023-2024q1" class="level2">
-<h2 class="anchored" data-anchor-id="the-private-housing-transaction-trend-from-2023-2024q1">3.1 the Private housing transaction trend from 2023-2024Q1</h2>
+<section id="the-relationship-between-transacted-price-and-property-type" class="level2">
+<h2 class="anchored" data-anchor-id="the-relationship-between-transacted-price-and-property-type">3.1 The relationship between <em>Transacted price</em> and <em>Property type</em></h2>
+<p>A pivotal aspect of our exploratory data analysis is understanding the relationship between the transacted price and the type of property. Different types of properties, such as condominiums, terraced houses, or apartments, may exhibit unique price distributions due to various factors like location, size, and amenities. These distinctions can provide us with valuable insights into market segmentation and consumer preferences.</p>
+<p>To visualize this relationship, we will construct a boxplot, which is anexcellent tool for depicting the distribution of transacted prices across different property types. This graphical representation will highlight the median, quartiles, and potential outliers within each property category.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'scales'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following object is masked from 'package:purrr':
-
-    discard</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following object is masked from 'package:readr':
-
-    col_factor</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter the original dataset for private housing</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>private_housing_data <span class="ot">&lt;-</span> RT_new <span class="sc">%&gt;%</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Housing_Category <span class="sc">==</span> <span class="st">"Private Housing"</span>)</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Aggregate to find the average transacted price for each property type and sale date</span></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>transacted_price_trend <span class="ot">&lt;-</span> private_housing_data <span class="sc">%&gt;%</span></span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>, <span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">Average_Price =</span> <span class="fu">mean</span>(<span class="st">`</span><span class="at">Transacted Price ($)</span><span class="st">`</span>), <span class="at">.groups =</span> <span class="st">'drop'</span>)</span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Find the maximum average price for each property type</span></span>
-<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>max_prices <span class="ot">&lt;-</span> transacted_price_trend <span class="sc">%&gt;%</span></span>
-<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">Max_Average_Price =</span> <span class="fu">max</span>(Average_Price), <span class="at">.groups =</span> <span class="st">'drop'</span>)</span>
-<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Join the maximum prices back to the transacted price trend</span></span>
-<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>annotated_data <span class="ot">&lt;-</span> transacted_price_trend <span class="sc">%&gt;%</span></span>
-<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(max_prices, <span class="at">by =</span> <span class="st">"Property Type"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Only keep the rows where the average price matches the max average price</span></span>
-<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Average_Price <span class="sc">==</span> Max_Average_Price) </span>
-<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Now, plot with annotations using ggrepel</span></span>
-<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(transacted_price_trend, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>, <span class="at">y =</span> Average_Price)) <span class="sc">+</span></span>
-<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb35-24"><a href="#cb35-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb35-25"><a href="#cb35-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_label_repel</span>(</span>
-<span id="cb35-26"><a href="#cb35-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> annotated_data,</span>
-<span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>),</span>
-<span id="cb35-28"><a href="#cb35-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">4</span>,</span>
-<span id="cb35-29"><a href="#cb35-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">nudge_y =</span> <span class="fl">0.1</span>,</span>
-<span id="cb35-30"><a href="#cb35-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">nudge_x =</span> <span class="fl">0.1</span>,</span>
-<span id="cb35-31"><a href="#cb35-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">fontface =</span> <span class="st">"bold"</span>,</span>
-<span id="cb35-32"><a href="#cb35-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">box.padding =</span> <span class="fu">unit</span>(<span class="fl">0.35</span>, <span class="st">"lines"</span>),</span>
-<span id="cb35-33"><a href="#cb35-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">point.padding =</span> <span class="fu">unit</span>(<span class="fl">0.5</span>, <span class="st">"lines"</span>)</span>
-<span id="cb35-34"><a href="#cb35-34" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb35-35"><a href="#cb35-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb35-36"><a href="#cb35-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb35-37"><a href="#cb35-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Private Housing Transacted Price Trend"</span>,</span>
-<span id="cb35-38"><a href="#cb35-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Sale Date"</span>,</span>
-<span id="cb35-39"><a href="#cb35-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Average Transacted Price ($)"</span></span>
-<span id="cb35-40"><a href="#cb35-40" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb35-41"><a href="#cb35-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>(<span class="at">labels =</span> <span class="fu">dollar_format</span>()) <span class="co"># Use a log10 scale for the y-axis</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
 <div class="cell-output-display">
-<p><img src="Take-home_Ex01_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid" width="672"></p>
+<p><img src="Take-home_Ex01_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>The scatter plot shows transaction prices for private housing, which appear to be spread across a wide range, with the majority clustering below $10,000,000. Based on these observations, the key takeaways could be the identification of property types with the highest prices, the recognition of the most common price range, and the overall trend in housing prices over the year.</p>
-<p>The plot’s points are densest between $1,000,000 and $10,000,000, suggesting that most transactions occur within this range. There are also several points that extend significantly higher, which may represent luxury or high-end properties,</p>
-</section>
-<section id="the-relationship-between-the-sales-units-and-area" class="level2">
-<h2 class="anchored" data-anchor-id="the-relationship-between-the-sales-units-and-area">3.2 the relationship between the sales Units and area</h2>
+<details>
+<summary>
+Click to show code
+</summary>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the first plot</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>plot1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(RT_new, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Planning Region</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Number of Units</span><span class="st">`</span>)) <span class="sc">+</span></span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Planning Region"</span>, <span class="at">y =</span> <span class="st">"Number of Units"</span>, <span class="at">title =</span> <span class="st">"Distribution of Units by Planning Region"</span>) <span class="sc">+</span></span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">vjust =</span> <span class="dv">1</span>), </span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span></span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the second plot</span></span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>plot2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(RT_new, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Planning Area</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Number of Units</span><span class="st">`</span>)) <span class="sc">+</span></span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Planning Area"</span>, <span class="at">y =</span> <span class="st">"Number of Units"</span>, <span class="at">title =</span> <span class="st">"Distribution of Units by Planning Area"</span>) <span class="sc">+</span></span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>),  <span class="co"># Rotate the labels to 45 degrees for better fitting</span></span>
-<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span>
-<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine the plots</span></span>
-<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>combined_plot <span class="ot">&lt;-</span> plot1 <span class="sc">/</span> plot2 </span>
-<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the combined plot</span></span>
-<span id="cb37-21"><a href="#cb37-21" aria-hidden="true" tabindex="-1"></a>combined_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(RT_new, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Transacted Price ($)</span><span class="st">`</span>, <span class="at">fill =</span> <span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"Pastel1"</span>) <span class="sc">+</span>  </span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">dollar_format</span>()) <span class="sc">+</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Property Type"</span>,</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Transacted Price ($)"</span>,</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Boxplot of Transacted Price by Property Type"</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>() <span class="sc">+</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+<div id="Obervation" class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Observation:</p>
+<ol type="1">
+<li><p>Executive Condominiums and Condominiums display higher median prices compared to Apartments and Terrace Houses.</p></li>
+<li><p>Detached Houses exhibit the widest range of transacted prices, indicating high variability in this property type.</p></li>
+<li><p>There are numerous outliers for Condominiums, suggesting that there are some highly priced units within this category.</p></li>
+<li><p>Apartments appear to be the most affordable property type, with lower median and fewer high-value outliers.</p></li>
+<li><p>Semi-Detached and Detached Houses show higher price ranges, suggesting these are generally more premium property types</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell">
 <div class="cell-output-display">
 <p><img src="Take-home_Ex01_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>The top bar chart shows the number of units distributed by planning region. It appears that the Central Region has the highest number of units, followed by the West Region. This might indicate a higher density of residential properties or more high-rise buildings in these regions compared to others like the North East Region, which shows a smaller number of units.</p>
-<p>The bottom bar chart provides a more granular view, breaking down the distribution by planning area within regions. Some areas stand out with significantly higher numbers of units. This level of detail can be helpful for urban planning, resource allocation, and understanding market demand in specific parts of the city.</p>
-<p>Implications for Housing Demand: High numbers of units in certain regions may indicate areas with high housing demand or development. Conversely, areas with fewer units could represent less developed or more exclusive regions. ## 3.3 the relationship between Transacted price and Property type</p>
+<details>
+<summary>
+Click to show code
+</summary>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(RT_new, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Transacted Price ($)</span><span class="st">`</span>)) <span class="sc">+</span></span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">dollar_format</span>()) <span class="sc">+</span>  <span class="co"># Logarithmic scale</span></span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Property Type"</span>,</span>
-<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Transacted Price ($)"</span>,</span>
-<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Boxplot of Transacted Price by Property Type"</span></span>
-<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>() <span class="sc">+</span></span>
-<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(RT_new, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Transacted Price ($)</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>, <span class="at">fill =</span> ..ecdf..)) <span class="sc">+</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_density_ridges</span>(</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">geom =</span> <span class="st">"density_ridges_gradient"</span>,</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">calc_ecdf =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">scale =</span> <span class="dv">3</span>, </span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">rel_min_height =</span> <span class="fl">0.01</span> </span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"Tail probability"</span>,</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">option =</span> <span class="st">"C"</span>, </span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>  </span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>(<span class="at">labels =</span> <span class="fu">dollar_format</span>()) <span class="sc">+</span>  <span class="co"># Use logarithmic scale for x-axis</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Transacted Price ($)"</span>,</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Property Type"</span>,</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Density Ridge Gradient Plot of Transacted Price by Property Type"</span></span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>() <span class="sc">+</span></span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>)</span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+<p>The plot illustrates the distribution of property prices across property types, with color intensity reflecting the probability density of price points.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Observation:</p>
+<ol type="1">
+<li><p>Apartments show the lowest price range, predominantly under $1,000,000, suggesting they are the most affordable property type within this market.</p></li>
+<li><p>Condominiums display a broader distribution with a significant concentration around $1,000,000 to $2,000,000, indicating a middle-tier price range.</p></li>
+<li><p>Detached Houses have the widest distribution, extending well beyond $10,000,000, highlighting them as the most varied and potentially expensive property type.</p></li>
+<li><p>Executive Condominiums appear to have a compact distribution centered just around $1,000,000, pointing to a less diverse price range.</p></li>
+<li><p>High-value Outliers are most prominent within Detached and Semi-Detached Houses, as seen in the long tails stretching to the right.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="distribution-of-sales-units-across-regions-and-areas" class="level2">
+<h2 class="anchored" data-anchor-id="distribution-of-sales-units-across-regions-and-areas">3.2 Distribution of <em>Sales Units</em> across <em>Regions</em> and <em>Areas</em></h2>
+<p>Understanding the spatial distribution of property sales is pivotal for recognizing market trends and potential areas of growth or decline. The bar plots constructed to visualize these distributions offer a clear visual representation of where the real estate market is most vibrant and where it is more subdued.</p>
+<div class="cell">
 <div class="cell-output-display">
-<p><img src="Take-home_Ex01_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" width="672"></p>
+<p><img src="Take-home_Ex01_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>The boxplot indicates that there is a wide range of transaction prices within each property type. This is especially pronounced for categories like ‘Detached House’, which has a notably higher median and wider interquartile range, suggesting greater variability in prices. Median Prices: The line in the middle of each box represents the median price of transactions for each property type. From the plot, ‘Detached Houses’ seem to have the highest median transacted price, followed by ‘Semi-Detached Houses’ and ‘Terrace Houses’. ‘Apartments’ and ‘Condominiums’ have lower median prices. The length of the boxes, which represents the IQR, shows the middle 50% of the data. The taller the box, the more variability there is in the middle half of the dataset. ‘Detached Houses’ and ‘Executive Condominiums’ show a larger IQR, indicating more variability in the prices of these properties as compared to others.</p>
-<p>##Conclusion Public housing caters to the majority with affordable options, enforcing an income cap to qualify. Private housing, on the other hand, serves those with higher income brackets, offering a diverse range of property types and price points.The exploratory data analysis highlights the stark segmentation within the private housing market. We observe that detached houses, catering to the upper end of the market, not only command higher prices but also demonstrate greater price variability, indicating niche luxury segments. Regional Demand and Supply Dynamics: The distribution of units by planning region and area reveals disparities in housing density that reflect both the current state of urban development and potential areas for growth. The Central Region’s high density suggests its centrality to employment and urban activities, likely translating into higher property demand and prices.</p>
-<p>In summary, the private housing market in Singapore offers a variety of options for families with different income levels, with distinct patterns in terms of price distribution and unit density across regions.</p>
+<details>
+<summary>
+Click to show code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>plot1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(RT_new, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Planning Region</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Number of Units</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span>  <span class="co"># Change the color here</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Planning Region"</span>, <span class="at">y =</span> <span class="st">"Number of Units"</span>, <span class="at">title =</span> <span class="st">"Distribution of Units by Planning Region"</span>) <span class="sc">+</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">vjust =</span> <span class="dv">1</span>), </span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>plot2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(RT_new, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Planning Area</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Number of Units</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"lightblue"</span>) <span class="sc">+</span>  <span class="co"># And here</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Planning Area"</span>, <span class="at">y =</span> <span class="st">"Number of Units"</span>, <span class="at">title =</span> <span class="st">"Distribution of Units by Planning Area"</span>) <span class="sc">+</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>), </span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine the plots</span></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>combined_plot <span class="ot">&lt;-</span> plot1 <span class="sc">/</span> plot2 </span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the combined plot</span></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>combined_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Observation:</p>
+<ol type="1">
+<li><p>The top plot reveals that the Central Region has the highest number of sales units compared to other regions, suggesting a denser or more active real estate market in this area. The other regions show significantly fewer units, with the North East Region and West Region being the next most active.</p></li>
+<li><p>The bottom plot breaks down the distribution within more granular areas. Here we see that certain areas, such as Marine Parade and Kallang.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Take-home_Ex01_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<details>
+<summary>
+Click to show code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>combined_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(RT_new, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Planning Area</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Number of Units</span><span class="st">`</span>, <span class="at">fill =</span> <span class="st">`</span><span class="at">Planning Region</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>()) <span class="sc">+</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="st">`</span><span class="at">Planning Region</span><span class="st">`</span> <span class="sc">~</span> ., <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Planning Area"</span>,</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Number of Units"</span>,</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Distribution of Units by Planning Area within each Planning Region"</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="dv">1</span>)</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"steelblue"</span>, <span class="st">"lightblue"</span>, <span class="st">"gray"</span>, <span class="st">"darkblue"</span>, <span class="st">"purple"</span>))</span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>combined_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Observation:</p>
+<ol type="1">
+<li><p>The Central Region shows a concentration of sales, especially in the Downtown Core and Marina East, suggesting a high demand for properties in the city’s commercial heart.</p></li>
+<li><p>The East Region sees a substantial number of transactions in Bedok and Tampines, indicating these areas are key residential zones with a blend of housing options.</p></li>
+<li><p>In the North East Region, Serangoon and Hougang stand out, hinting at their popularity and potential as residential areas.</p></li>
+<li><p>The North Region presents a uniform spread of sales, implying a balanced distribution of housing transactions without a dominant area.</p></li>
+<li><p>The West Region has a modest distribution with a notable presence in Jurong West, suggesting growth potential in this locality.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="the-private-housing-price-trend-from-2023-2024q1" class="level2">
+<h2 class="anchored" data-anchor-id="the-private-housing-price-trend-from-2023-2024q1">3.3 The Private Housing price trend from 2023-2024Q1</h2>
+<p>This density plot depicts the distribution of transacted real estate prices across different quarters, from Q1 2023 to Q1 2024.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Take-home_Ex01_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<details>
+<summary>
+Click to show code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales) <span class="co"># for dollar_format()</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(RT_new, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Transacted Price ($)</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="fu">aes</span>(<span class="at">color =</span> Quarter), <span class="at">adjust =</span> <span class="fl">0.5</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">100000</span>, <span class="dv">10000000</span>), <span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">dollar_format</span>()) <span class="sc">+</span> <span class="co"># Log transform and set limits</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Density Plot of Transacted Prices by Quarter"</span>,</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Transacted Price ($)"</span>,</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Density"</span>) <span class="sc">+</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>),  <span class="co"># Increase base text size</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="st">"bold"</span>),  <span class="co"># Bold axis titles</span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>),  <span class="co"># Rotate x-axis text for readability</span></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>), </span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>),  </span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Observation:</p>
+<ol type="1">
+<li><p>The curves are quite similar in shape and position, indicating that the general distribution of prices has remained relatively stable from quarter to quarter during this timeframe.</p></li>
+<li><p>There’s a tailing off as the prices increase, which is typical of real estate markets where there are fewer high-priced transactions.</p></li>
+<li><p>The small bumps and increases in density at the higher end of the price scale, particularly noticeable in the curves for Q2 and Q4 2023, might indicate periods or areas with higher-than-average property transactions.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<p>The scatter plot shows transaction prices for private housing, which appear to be spread across a wide range. Based on these observations, the key takeaways could be the identification of property types with the highest prices, the recognition of the most common price range, and the overall trend in housing prices over the year.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Take-home_Ex01_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<details>
+<summary>
+Click to show code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>private_housing_data <span class="ot">&lt;-</span> RT_new <span class="sc">%&gt;%</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Housing_Category <span class="sc">==</span> <span class="st">"Private Housing"</span>)</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>transacted_price_trend <span class="ot">&lt;-</span> private_housing_data <span class="sc">%&gt;%</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>, <span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">Average_Price =</span> <span class="fu">mean</span>(<span class="st">`</span><span class="at">Transacted Price ($)</span><span class="st">`</span>), <span class="at">.groups =</span> <span class="st">'drop'</span>)</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>max_prices <span class="ot">&lt;-</span> transacted_price_trend <span class="sc">%&gt;%</span></span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">Max_Average_Price =</span> <span class="fu">max</span>(Average_Price), <span class="at">.groups =</span> <span class="st">'drop'</span>)</span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>annotated_data <span class="ot">&lt;-</span> transacted_price_trend <span class="sc">%&gt;%</span></span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(max_prices, <span class="at">by =</span> <span class="st">"Property Type"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Only keep the rows where the average price matches the max average price</span></span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Average_Price <span class="sc">==</span> Max_Average_Price) </span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(transacted_price_trend, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>, <span class="at">y =</span> Average_Price)) <span class="sc">+</span></span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> <span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>)) <span class="sc">+</span>  <span class="co"># Color points by Property Type</span></span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_label_repel</span>(</span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> annotated_data,</span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>),</span>
+<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">4</span>,</span>
+<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">nudge_y =</span> <span class="fl">0.1</span>,</span>
+<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">nudge_x =</span> <span class="fl">0.1</span>,</span>
+<span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">fontface =</span> <span class="st">"bold"</span>,</span>
+<span id="cb29-32"><a href="#cb29-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">box.padding =</span> <span class="fu">unit</span>(<span class="fl">0.35</span>, <span class="st">"lines"</span>),</span>
+<span id="cb29-33"><a href="#cb29-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">point.padding =</span> <span class="fu">unit</span>(<span class="fl">0.5</span>, <span class="st">"lines"</span>)</span>
+<span id="cb29-34"><a href="#cb29-34" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb29-35"><a href="#cb29-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb29-36"><a href="#cb29-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb29-37"><a href="#cb29-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Private Housing Transacted Price Distribution"</span>,</span>
+<span id="cb29-38"><a href="#cb29-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Sale Date"</span>,</span>
+<span id="cb29-39"><a href="#cb29-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Average Transacted Price ($)"</span></span>
+<span id="cb29-40"><a href="#cb29-40" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb29-41"><a href="#cb29-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>(<span class="at">labels =</span> <span class="fu">dollar_format</span>()) <span class="sc">+</span></span>
+<span id="cb29-42"><a href="#cb29-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette =</span> <span class="st">"Set1"</span>) <span class="co"># Adds a color palette for different property types</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Take-home_Ex01_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<details>
+<summary>
+Click to show code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(transacted_price_trend, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Sale Date</span><span class="st">`</span>, <span class="at">y =</span> Average_Price)) <span class="sc">+</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> <span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span><span class="st">`</span><span class="at">Property Type</span><span class="st">`</span>, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span>  <span class="co"># Facet by Property Type</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Private Housing Transacted Price Trend by Property Type"</span>,</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Sale Date"</span>,</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Average Transacted Price ($)"</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>(<span class="at">labels =</span> <span class="fu">dollar_format</span>()) <span class="sc">+</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette =</span> <span class="st">"Set1"</span>) <span class="sc">+</span></span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="co"># Remove the legend to save space</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Observation:</p>
+<p><strong>Condominiums</strong> : Prices are concentrated within a narrower band, showing less variation over time, which suggests stability in condominium prices.</p>
+<p><strong>Detached Houses</strong> : Display a broader range of prices, indicating a more diverse market that includes both moderately priced and high-end luxury homes.</p>
+<p><strong>Executive Condominiums</strong> : Have a clustering of prices at the lower end, with an upward trend over time, which may indicate increasing demand or value appreciation for this type of property.</p>
+<p><strong>Semi-Detached Houses</strong> : Similar to detached houses, they show a wide range of transaction prices, reflecting a varied market.</p>
+<p><strong>Terrace Houses</strong> : Prices seem to have a smaller variation and are centered around a price point, suggesting a more uniform market for this type of property.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<ul>
+<li><p>Public housing caters to the majority with affordable options. Private housing, on the other hand, serves those with higher income brackets, offering a diverse range of property types and price points.The exploratory data analysis highlights the stark segmentation within the private housing market. We observe that detached houses, catering to the upper end of the market, not only command higher prices but also demonstrate greater price variabilitys.</p></li>
+<li><p>The distribution of units by planning region and area reveals disparities in housing density that reflect both the current state of urban development and potential areas for growth. High numbers of units in certain regions may indicate areas with high housing demand or development. Conversely, areas with fewer units could represent less developed or more exclusive regions.</p></li>
+<li><p>Over the depicted time period from 2023Q1 to 2024Q1, there does not appear to be a clear upward or downward trend in prices for any property type, suggesting relative market stability during this time.</p></li>
+<li><p>In summary, the private housing market in Singapore offers a variety of options for families with different income levels, with distinct patterns in terms of price distribution and unit density across regions.</p></li>
+</ul>
 
 
 </section>
