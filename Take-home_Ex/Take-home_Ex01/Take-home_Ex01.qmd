@@ -59,7 +59,7 @@ pacman::p_load(tidyverse, ggrepel, patchwork,
 
 ## **1.2 Importing data**
 
-The code chunk below imports the dataset into R environment by using [*read_csv()*](https://readr.tidyverse.org/reference/read_delim.html) function of [**readr**](https://readr.tidyverse.org/) package. **readr** is one of the tidyverse package.
+The code chunk below imports the dataset into R environment by using [*`read_csv()`*](https://readr.tidyverse.org/reference/read_delim.html) function of [`readr`](https://readr.tidyverse.org/) package. **readr** is one of the tidyverse package.
 
 Read the individual CSV files into data frames. Check that the structure of each data frame is the same.
 
