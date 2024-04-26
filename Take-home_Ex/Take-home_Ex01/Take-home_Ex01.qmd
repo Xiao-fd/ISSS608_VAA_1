@@ -83,7 +83,7 @@ RT_q4_2023 <- read_csv("data/ResidentialTransaction2023Q4.csv")
 RT_q1_2024 <- read_csv("data/ResidentialTransaction2024Q1.csv")
 ```
 
-This is to conduct a preliminary exploration to understand the basic characteristics of the dataset. Notably, the 'Sale Date' column, which should ideally be a date type to facilitate chronological analysis, is read as a character (chr) type.
+This is to conduct a preliminary exploration to understand the basic characteristics of the dataset. Notably, the 'Sale Date' column, which should ideally be a date type , it is read as a character (chr) type.
 
 ::: callout-warning
 ![](images/clipboard-224818948.png){width="380"}
@@ -245,8 +245,7 @@ glimpse(RT_new)
 
 ## 2.4 Summary statistics of data table
 
-Moving forward, we will compute summary statistics. These will provide us with valuable
-insights, such as the average, median, minimum, and maximum transacted prices, which are pivotal for understanding the market's behavior.
+Moving forward, we will compute summary statistics. These will provide us with valuable insights, such as the average, median, minimum, and maximum transacted prices, which are pivotal for understanding the market's behavior.
 
 ::: panel-tabset
 ## Summary
@@ -426,7 +425,7 @@ Observation:
 5.  High-value Outliers are most prominent within Detached and Semi-Detached Houses, as seen in the long tails stretching to the right.
 :::
 
-## 3.2  Distribution of *Sales Units* across *Regions* and *Areas*
+## 3.2 Distribution of *Sales Units* across *Regions* and *Areas*
 
 Understanding the spatial distribution of property sales is pivotal for recognizing market trends and potential areas of growth or decline. The bar plots constructed to visualize these distributions offer a clear visual representation of where the real estate market is most vibrant and where it is more subdued.
 
@@ -482,40 +481,29 @@ combined_plot
 
 </details>
 
-::: {.callout-tip appearance="simple"}
-Observation:
-
-1.  The top plot reveals that the Central Region has the highest number of
-    sales units compared to other regions, suggesting a denser or more
-    active real estate market in this area. The other regions show
-    significantly fewer units, with the North East Region and West Region
-    being the next most active.
-
-2.  The bottom plot breaks down the distribution within more granular areas.
-    Here we see that certain areas, such as Marine Parade and Kallang.
-:::
-
 ```{r echo=FALSE}
-library(ggplot2)
-# Creating a bar plot with Planning Area on the x-axis and color distinguished by Planning Region
-combined_plot <- ggplot(RT_new, aes(x = `Planning Area`, y = `Number of Units`, fill = `Planning Region`)) +
-  geom_bar(stat = "identity", position = position_dodge()) +
-  facet_grid(`Planning Region` ~ ., scales = "free_y") +
+
+# Sum the 'Number of Units' for each 'Planning Area' within each 'Planning Region'
+RT_new_aggregated <- RT_new %>%
+  group_by(`Planning Region`, `Planning Area`) %>%
+  summarise(TotalUnits = sum(`Number of Units`), .groups = 'drop') 
+
+combined_plot <- ggplot(RT_new_aggregated, aes(x = `Planning Area`, y = TotalUnits)) +
+  geom_bar(stat = "identity", position = "dodge", fill = "lightblue") +
+  facet_wrap(~`Planning Region`, scales = "free_x") +
   labs(
     x = "Planning Area",
-    y = "Number of Units",
-    title = "Distribution of Units by Planning Area within each Planning Region"
+    y = "Total Number of Units",
+    title = "Distribution of Total Units by Planning Area within each Planning Region"
   ) +
   theme_minimal() +
   theme(
     axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 8),
-    legend.position = "bottom",
-    plot.title = element_text(hjust = 1)
+    legend.position = "none"
   ) +
-  scale_fill_manual(values = c("steelblue", "lightblue", "gray", "darkblue", "blue"))
-
-# Display the combined plot in the R console
+  scale_y_continuous(expand = expansion(mult = c(0, .05)))
 combined_plot
+
 
 ```
 
@@ -524,23 +512,27 @@ combined_plot
 <summary>Click to show code</summary>
 
 ```{r eval=FALSE}
-combined_plot <- ggplot(RT_new, aes(x = `Planning Area`, y = `Number of Units`, fill = `Planning Region`)) +
-  geom_bar(stat = "identity", position = position_dodge()) +
-  facet_grid(`Planning Region` ~ ., scales = "free_y") +
+# Sum the 'Number of Units' for each 'Planning Area' within each 'Planning Region'
+RT_new_aggregated <- RT_new %>%
+  group_by(`Planning Region`, `Planning Area`) %>%
+  summarise(TotalUnits = sum(`Number of Units`), .groups = 'drop') 
+
+combined_plot <- ggplot(RT_new_aggregated, aes(x = `Planning Area`, y = TotalUnits)) +
+  geom_bar(stat = "identity", position = "dodge", fill = "lightblue") +
+  facet_wrap(~`Planning Region`, scales = "free_x") +
   labs(
     x = "Planning Area",
-    y = "Number of Units",
-    title = "Distribution of Units by Planning Area within each Planning Region"
+    y = "Total Number of Units",
+    title = "Distribution of Total Units by Planning Area within each Planning Region"
   ) +
   theme_minimal() +
   theme(
     axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 8),
-    legend.position = "bottom",
-    plot.title = element_text(hjust = 1)
+    legend.position = "none"
   ) +
-  scale_fill_manual(values = c("steelblue", "lightblue", "gray", "darkblue", "purple"))
-
+  scale_y_continuous(expand = expansion(mult = c(0, .05)))
 combined_plot
+
 ```
 
 </details>
@@ -548,15 +540,9 @@ combined_plot
 ::: {.callout-tip appearance="simple"}
 Observation:
 
-1.  The Central Region shows a concentration of sales, especially in the Downtown Core and Marina East, suggesting a high demand for properties in the city’s commercial heart.
+The top plot reveals that the Central Region has the highest number of sales units compared to other regions, suggesting a denser or more active real estate market in this area. The other regions show significantly fewer units, with the North East Region and West Region being the next most active. Both these regions show a more even distribution, with most planning areas having a moderate number of units, generally in the range of about 500 to 1000 units. This might indicate a more balanced development approach or uniform population density.
 
-2.  The East Region sees a substantial number of transactions in Bedok and Tampines, indicating these areas are key residential zones with a blend of housing options.
-
-3.  In the North East Region, Serangoon and Hougang stand out, hinting at their popularity and potential as residential areas.
-
-4.  The North Region presents a uniform spread of sales, implying a balanced distribution of housing transactions without a dominant area.
-
-5.  The West Region has a modest distribution with a notable presence in Jurong West, suggesting growth potential in this locality.
+The North Region and West Region seem to have less developed character based on the generally lower number of units.
 :::
 
 ## 3.3 The Private Housing price trend from 2023-2024Q1
