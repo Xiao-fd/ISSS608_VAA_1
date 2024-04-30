@@ -2,7 +2,7 @@
 title: "Hands-on_Ex03(2)"
 ---
 
-# **4  Programming Animated Statistical Graphics with R**
+# **4. Programming Animated Statistical Graphics with R**
 
 ## **4.1 Overview**
 
