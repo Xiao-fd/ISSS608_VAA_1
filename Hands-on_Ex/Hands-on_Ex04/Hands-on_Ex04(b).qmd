@@ -1,5 +1,5 @@
 ---
-title: "Hands-on_Ex04(2)"
+title: "Hands-on_Ex04(b)"
 ---
 
 # **5. Visualising Uncertainty**
