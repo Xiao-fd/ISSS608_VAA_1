@@ -52,7 +52,7 @@ tidyverse, tidygraph, ggraph, igraph)
 ### **5.3.1 Creating a folder list**
 
 ```{r}
-news20 <- "chap29/data/20news/"
+news20 <- "data/20news/"
 ```
 
 ### **5.3.2 Define a function to read all files from a folder into a data frame**
@@ -82,7 +82,7 @@ raw_text <- tibble(folder =
   unnest(cols = c(folder_out)) %>%
   transmute(newsgroup = basename(folder), 
             id, text)
-write_rds(raw_text, "data/rds/news20.rds")
+write_rds(raw_text, "data/news20.rds")
 ```
 
 ::: callout-note
@@ -102,7 +102,7 @@ write_rds(raw_text, "data/rds/news20.rds")
 ## **5.5 Initial EDA**
 
 ```{r}
-raw_text <- news20
+raw_text <- read_rds("data/news20.rds")
 raw_text %>%
   group_by(newsgroup) %>%
   summarize(messages = n_distinct(id)) %>%
